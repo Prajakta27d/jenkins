@@ -1,0 +1,10 @@
+#!/bin/bash
+sudo wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.99/bin/apache-tomcat-8.5.99.tar.gz
+sudo apt update
+sudo tar -xzvf apache-tomcat-8.5.99.tar.gz
+sudo git clone https://github.com/Prajakta27d/jenkins.git
+cd /home/ubuntu/workspace/freestyle1/jenkins/ 
+sudo mv student.war /home/ubuntu/workspace/freestyle1/apache-tomcat-8.5.99/webapps
+cd /home/ubuntu/workspace/freestyle1/apache-tomcat-8.5.99/bin
+./catalina.sh stop
+./catalina.sh start
