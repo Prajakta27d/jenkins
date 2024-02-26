@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Simple EC2 instance'
+
+Resources:
+  MyEC2Instance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      InstanceType: 't2.micro'
+      ImageId: 'ami-06aa3f7caf3a30282'  
+      KeyName: 'key..pem'             
+      SecurityGroupIds:
+        - 'sg-0e98ca5b3261d7d6f'        
+      Tags:
+        - Key: 'Name'
+          Value: 'MyEC2Instance'
